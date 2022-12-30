@@ -1,4 +1,4 @@
-// renaming json file as js for easier access as import with assert (json) isn't supported in firefox
+// Renaming json file as js 
 export const data = [
     {
       id: 1,
