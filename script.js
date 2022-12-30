@@ -1,15 +1,16 @@
-// using javascript modules for easier access of data as import with assert (json) isn't supported in firefox
+// using javascript 
 import { data } from "./data.js";
 const tbody = document.querySelector("tbody");
 let students = data;
 students = students.map(transformingData);
-// adding default 100 student data to table
+
+// add 100 students data to table
 students.forEach(addToTable);
 
 const searchInput = document.querySelector("#search");
 const form = document.querySelector("form");
 
-// instruction wasn't clear as handleChange is React event thus used input event.
+
 searchInput.addEventListener("input", filterBySearch);
 form.addEventListener("submit", filterBySearch);
 
@@ -17,7 +18,7 @@ function filterBySearch(event) {
   event.preventDefault();
   let value = searchInput.value.trim().toLowerCase();
   if (value.length) {
-    // something to filter
+ 
     let filtered = students.filter(
       (student) =>
         student.name.toLowerCase().includes(value) ||
@@ -29,7 +30,7 @@ function filterBySearch(event) {
       tbody.innerText = "";
     }
   } else {
-    // render the complete list
+    // rendering the complete list
     students.forEach(addToTable);
   }
 }
@@ -93,7 +94,7 @@ function transformingData(student) {
   };
 }
 function addToTable(student, i) {
-  // there are multiple insertions going to happen (leading to duplicates) thus, reset the table first.
+  // to avoid duplication, reset the table first.
   if (i == 0) {
     tbody.innerText = "";
   }
@@ -104,7 +105,7 @@ function addToTable(student, i) {
   for (let i = 0; i < data.length; i++) {
     if (i == 2) continue;
     if (i == 1) {
-      // inserting name
+      // inserting  the names
       const nameTd = document.createElement("td");
       nameTd.innerHTML = `<img src=${student.imgSrc} alt="photo"/> <span>${student.name}</span>`;
       tr.append(nameTd);
