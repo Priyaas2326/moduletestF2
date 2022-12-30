@@ -1,5 +1,5 @@
 // using javascript modules for easier access of data as import with assert (json) isn't supported in firefox
-import { data } from "./MOCK_DATA.js";
+import { data } from "./data.js";
 const tbody = document.querySelector("tbody");
 let students = data;
 students = students.map(transformingData);
