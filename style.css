@@ -1,30 +1,34 @@
+// css code
 * {
     box-sizing: border-box;
     background : #D9D9D9;
   }
-  /* font */
+  /* for font */
   body {
     font-family: sans-serif;
     margin: 0;
   }
-  /* heading */
+  /* for heading */
   h2 {
     margin-top: 0;
     font-weight: normal;
   }
-  /* Nav bar and Buttons */
+  /* for Nav bar and Buttons */
   .flex {
     display: flex;
     justify-content: space-between;
-    gap: 0.5em;
+    gap: 0.25em;
+    font-size: 17px;
+    
   }
-  /* button Bg and color */
+  /* for button Background and color */
   .bg-black {
     background: black;
     color: white;
     padding: 1em;
+    
   }
-  /* container */
+  /* for container */
   .container {
     max-width: 90vw;
     margin: 0 auto;
@@ -33,12 +37,12 @@
   .flow-space > * + * {
     margin-top: var(--spacer, 1em);
   }
-  /* table */
+  /*for  table */
   table {
     border-spacing: 0;
     text-align: left;
   }
-  /* thead and data */
+  /*for table head and data */
   th,
   td {
     font-weight: normal;
@@ -50,23 +54,8 @@
   td {
     padding: 0.3em 1em;
   }
-  /*  child properties*/
-  th:first-child,
-  td:first-child {
-    text-align: center;
-    width: 25px;
-  }
-  th:nth-child(2) {
-    width: 275px;
-  }
   
-  td:nth-child(2) {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: 0.5em;
-  }
-  /*  btn */
+  /*  button */
   button {
     cursor: pointer;
     border: none;
@@ -78,7 +67,7 @@
   .active {
     opacity: 0.5;
   }
-  /* btn hover */
+  /* button hover */
   button:hover {
     opacity: 0.7;
   }
@@ -95,4 +84,20 @@
     height: 45px;
     border: 2px solid black;
     border-radius: 50%;
+  }
+  /*  child properties*/
+  th:first-child,
+  td:first-child {
+    text-align: center;
+    width: 25px;
+  }
+  th:nth-child(2) {
+    width: 275px;
+  }
+  
+  td:nth-child(2) {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0.5em;
   }
